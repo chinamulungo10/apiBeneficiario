@@ -1,0 +1,30 @@
+.bg-mynav {
+  background-color: #cef00e;
+}
+
+body {
+  font-size: 1.25rem;
+  background-color: #85708b;
+}
+
+td {
+  line-height: 3rem;
+}
+
+.nav-link--black {
+  color: rgb(77, 7, 61, 0.829);
+}
+
+.nav-pills .nav-link.active {
+  color: rgb(247, 247, 247);
+  background-color: rgba(6, 143, 143, 0.829);
+}
+
+.nav-link:focus,
+.nav-link:hover {
+  color: rgb(168, 236, 8);
+}
+
+.big-swal {
+  width: 700px !important;
+}
