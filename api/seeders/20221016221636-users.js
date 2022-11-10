@@ -3,7 +3,7 @@ module.exports = {
     [
       {
         name: "Chinamulungo",
-        password: "54321",
+        password: "12345",
         email: "chafim.chinamulungo@univates.universo.br",
         age: 24,
         sex: "M",

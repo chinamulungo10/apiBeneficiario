@@ -9,19 +9,6 @@ class Beneficiario extends Model {
   declare cpf: string;
   declare agregadoFamiliar: string;
   declare sexo: string;
-
-  static locateBeneficiario = async (name: string, dataNascimento: string, cpf: string, agregadoFamiliar: string, sexo: string, password: string) => {
-    return await Beneficiario.findOne({
-      where: {
-        name: name,
-        dataNascimento: dataNascimento,
-        cpf: cpf,
-        agregadoFamiliar: agregadoFamiliar,
-        sexo: sexo,
-        password: password
-      }
-    });
-  }
 };
 
 Beneficiario.init({
@@ -51,10 +38,13 @@ Beneficiario.init({
     type: DataTypes.STRING,
     allowNull: false
   },
-  password: {
-    type: DataTypes.STRING,
-    allowNull: false
-  }
+  city_id: {
+     type: DataTypes.INTEGER,
+       references: {
+        model: City,
+        key: 'id'
+       },
+      }
 },
   {
     sequelize: db,

@@ -1,10 +1,10 @@
 .bg-mynav {
-  background-color: #cef00e;
+  background-color: #f0ce0e;
 }
 
 body {
   font-size: 1.25rem;
-  background-color: #85708b;
+  background-color: #917b6c;
 }
 
 td {
@@ -17,7 +17,7 @@ td {
 
 .nav-pills .nav-link.active {
   color: rgb(247, 247, 247);
-  background-color: rgba(6, 143, 143, 0.829);
+  background-color: rgba(52, 248, 248, 0.829);
 }
 
 .nav-link:focus,

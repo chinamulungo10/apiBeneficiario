@@ -5,6 +5,7 @@ import routerUsers from './users';
 import routerStates from './states';
 import routerCities from './cities';
 import routerBeneficiarios from './beneficiarios';
+import routerOrganizacoes from './organizacoes';
 
 const router = express.Router();
 
@@ -46,5 +47,6 @@ router.use(routerUsers);
 router.use(routerStates);
 router.use(routerCities);
 router.use(routerBeneficiarios);
+router.use(routerOrganizacoes);
 
 export default router;

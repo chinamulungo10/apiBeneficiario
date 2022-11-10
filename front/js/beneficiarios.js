@@ -25,9 +25,8 @@ const beneficiarioCreate = () => {
     const name = document.getElementById("name").value;
     const dataNascimento = document.getElementById("dataNascimento").value;
     const cpf = document.getElementById("cpf").value;
-    const agregadoFamilia = document.getElementById("agregadoFamiliar").value;
+    const agregadoFamiliar = document.getElementById("agregadoFamiliar").value;
     const sexo = document.getElementById("sexo").value;
-    const password = document.getElementById("password").value;
 
     axios.post(`${ENDPOINT}/beneficiarios`, {
         name: name,
@@ -35,7 +34,6 @@ const beneficiarioCreate = () => {
         cpf: cpf,
         agregadoFamiliar: agregadoFamiliar,
         sexo: sexo,
-        password: password
     })
         .then((response) => {
             Swal.fire(`Beneficiario ${response.data.name} created`);
@@ -59,13 +57,12 @@ const beneficiarioEdit = () => {
     const cpf = document.getElementById("cpf").value;
     const agregadoFamiliar = document.getElementById("agregadoFamiliar").value;
     const sexo = document.getElementById("sexo").value;
-    const password = document.getElementById("password").value;
 
     axios.put(`${ENDPOINT}/beneficiarios/` + id, {
         name: name,
         dataNascimento: dataNascimento,
         cpf: cpf,
-        agregadoFamilia: agregadoFamilia,
+        agregadoFamilia: agregadoFamiliar,
         sexo: sexo,
     })
         .then((response) => {
@@ -101,8 +98,7 @@ const showBeneficiarioCreateBox = () => {
             '<input id="dataNascimento" class="swal2-input" placeholder="DataNascimento">' +
             '<input id="cpf" class="swal2-input" placeholder="cpf">' +
             '<input type="agregadoFamiliar" id="agregadoFamiliar" class="swal2-input" placeholder="AgregadoFamiliar">' +
-            '<input id="sexo" class="swal2-input" placeholder="sexo">' +
-            '<input type="password" id="password" class="swal2-input" placeholder="Password">',
+            '<input id="sexo" class="swal2-input" placeholder="sexo">' ,
             
            
         focusConfirm: false,
@@ -123,9 +119,8 @@ const showBeneficiarioEditBox = async (id) => {
             '<input id="name" class="swal2-input" placeholder="Name" value="' + data.name + '">' +
             '<input id="dataNascimento" class="swal2-input" placeholder="DataNascimento" value="' + data.dataNascimento + '">' +
             '<input id="cpf" class="swal2-input" placeholder="Cpf" value="' + data.cpf + '">' +
-            '<input type="agregadoFamiliar" id="agregadoFamiliar" class="swal2-input" placeholder="AgregadoFamiliar" value="' + data.agregadoFamilia + '">' +
-            '<input id="sexo" class="swal2-input" placeholder="Sexo" value="' + data.sexo + '">' +
-            '<input type="password" id="password" class="swal2-input" placeholder="Password" value="' + data.password + '">',
+            '<input type="agregadoFamiliar" id="agregadoFamiliar" class="swal2-input" placeholder="AgregadoFamiliar" value="' + data.agregadoFamiliar + '">' +
+            '<input id="sexo" class="swal2-input" placeholder="Sexo" value="' + data.sexo + '">' ,
             
            
         focusConfirm: false,
